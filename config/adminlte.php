@@ -322,38 +322,39 @@ return [
             'can' => 'manage-blog',
         ],
         [
-            'text' => 'Eventos',
-            'url' => 'http://127.0.0.1:8000/eventos',
-            'icon' => 'fas fa-bullhorn',
-            'label_color' => 'success',
-        ],
-        [
-            'text' => 'Ponentes',
-            'url' => 'http://127.0.0.1:8000/ponentes',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'Noticias',
-            'url' => 'http://127.0.0.1:8000/noticias',
-            'icon' => 'fab fa-audible
-            ',
-        ],
+        'text' => 'Eventos',
+        'url' =>'eventos',  
+        'icon' => 'fas fa-bullhorn',
+        'label_color' => 'success',
+    ],
+    [
+        'text' => 'Ponentes',
+        'url' =>'ponentes',  
+        'icon' => 'fas fa-bullhorn',
+        'label_color' => 'success',
+    ],
+    [
+        'text' => 'Noticias',
+        'url' =>'noticias',  
+        'icon' => 'fas fa-bullhorn',
+        'label_color' => 'success',
+    ],
         [
             'text' => 'Añadir',
             'icon' => 'fas fa-fw fa-share',
             'submenu' => [
                 [
                     'text' => 'Añadir Evento',
-                    'url' => 'http://127.0.0.1:8000/eventos/create',
+                    'url' => 'eventos/create',
                 ],
                 [
                     'text' => 'Añadir Noticia',
-                    'url' => 'http://127.0.0.1:8000/noticias/create',
+                    'url' => 'noticias/create',
                 
                 ],
                 [
                     'text' => 'Añadir Ponente',
-                    'url' => 'http://127.0.0.1:8000/ponentes/create',
+                    'url' => 'ponentes/create',
                 ],
             ],
         ],
