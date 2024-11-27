@@ -26,7 +26,7 @@ class NoticiaController extends Controller
     {
         // Validar los datos de entrada
         $request->validate([
-            'nombre_noticia' => 'required|string|max:255',
+            'nombre_noticia' => 'required|string|max:255|unique:noticias,nombre_noticia',
             'descripcion_noticia' => 'required|string',
             'fecha_noticia' => 'required|date',
             'archivo_pdf' => 'nullable|file|mimes:pdf|max:4800',

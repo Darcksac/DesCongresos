@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Dashboard</b>',
+    'logo' => '<b>Panel</b>',
     'logo_img' => '',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -84,9 +84,9 @@ return [
     */
 
     'auth_logo' => [
-        'enabled' => false,
+        'enabled' => true,
         'img' => [
-            'path' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
+            'path' => 'public/storage/Banner/udg.jpg',
             'alt' => 'Auth Logo',
             'class' => '',
             'width' => 50,

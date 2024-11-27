@@ -30,11 +30,18 @@
                         <img src="{{ asset('storage/' . $noticia->imagen) }}" alt="Imagen Noticia" width="100">
                     @endif
                 </td>
+                
                 <td>
                     <a href="{{ route('noticias.show', $noticia->id) }}" class="btn btn-info btn-sm">Ver</a>
+                    @if($noticia->archivo_pdf)
+        <div>
+            <a href="{{ asset('storage/' . $noticia->archivo_pdf) }}" target="_blank">Ver PDF</a>
+        </div>
+    @endif
                     <a href="{{ route('noticias.edit', $noticia->id) }}" class="btn btn-warning btn-sm">Editar</a>
                     <form action="{{ route('noticias.destroy', $noticia->id) }}" method="POST" style="display:inline;">
                         @csrf
+                        
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('¿Estás seguro?')">Eliminar</button>
                     </form>
