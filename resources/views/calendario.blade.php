@@ -112,9 +112,11 @@
                 <li class="nav-item">
                     <a class="nav-link" href="/contacto">Contacto</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Admin</a>
-                </li>
+                @if(Auth::check())
+    <a href="{{ route('eventos.index') }}" class="btn btn-primary">Ir a panel</a>
+@else
+    <a href="{{ route('login') }}" class="btn btn-primary">Iniciar Sesión</a>
+@endif
             </ul>
         </div>
     </nav>

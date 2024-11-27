@@ -12,7 +12,7 @@ use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\CalendarioController;
 use App\Models\Evento;
 use App\Http\Controllers\InicioController;
-
+use App\Http\Controllers\Auth\AuthenticatedSessionController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,5 +67,12 @@ Route::middleware('auth')->resource('eventos', EventoController::class);
 Route::resource('eventos', EventoController::class)->middleware('auth');
 Route::resource('noticias', NoticiaController::class)->middleware('auth');
 Route::resource('ponentes', PonenteController::class)->middleware('auth');
+
+
+
+
+Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
+Route::post('login', [AuthenticatedSessionController::class, 'store']);
+Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])->name('logout');
 
 require __DIR__.'/auth.php';
