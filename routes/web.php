@@ -64,9 +64,15 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->resource('eventos', EventoController::class);
 
-Route::resource('eventos', EventoController::class)->middleware('auth');
-Route::resource('noticias', NoticiaController::class)->middleware('auth');
-Route::resource('ponentes', PonenteController::class)->middleware('auth');
+Route::resource('eventos', EventoController::class)
+->middleware('auth')
+->names('eventos');
+Route::resource('noticias', NoticiaController::class)
+->middleware('auth')
+->names('noticias');
+Route::resource('ponentes', PonenteController::class)
+->middleware('auth')
+->names(names: 'ponentes');
 
 
 
