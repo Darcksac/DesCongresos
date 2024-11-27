@@ -15,11 +15,11 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_noticia');
             $table->text('descripcion_noticia');
+            $table->string('imagen')->nullable();
             $table->date('fecha_noticia');
-            $table->string('archivo_pdf')->nullable(); 
+            $table->string('archivo_pdf')->nullable();
             $table->timestamps();
         });
-        
     }
 
     /**

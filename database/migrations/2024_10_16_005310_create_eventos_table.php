@@ -16,9 +16,12 @@ return new class extends Migration
             $table->string('nombre_evento');
             $table->text('descripcion_evento');
             $table->date('fecha_evento');
+            $table->time('hora_evento');
+            $table->integer('duracion_evento');
+            $table->string('lugar_evento')->nullable();
+            $table->string('imagen')->nullable();
             $table->timestamps();
         });
-        
     }
 
     /**
