@@ -115,4 +115,20 @@ return [
     'string' => 'El campo :attribute debe ser una cadena de texto.',
     'timezone' => 'El campo :attribute debe ser una zona horaria válida.',
     'unique' => 'El campo :attribute ya ha sido tomado.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Mensajes personalizados
+    |--------------------------------------------------------------------------
+    */
+
+    'custom' => [
+        'nombre_evento' => [
+            'unique' => 'El nombre del evento ya está registrado.',
+        ],
+        'nombre_noticia' => [
+            'unique' => 'El nombre de la noticia ya está registrado.',
+        ],
+    ],
+
 ];

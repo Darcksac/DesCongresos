@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('noticias', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_noticia')-unique();
+            $table->string('nombre_noticia')->unique();
             $table->text('descripcion_noticia');
             $table->string('imagen')->nullable();
             $table->date('fecha_noticia');

@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('eventos', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre_evento');
+            $table->string('nombre_evento')->unique();
             $table->text('descripcion_evento');
             $table->date('fecha_evento');
             $table->time('hora_evento');

@@ -24,7 +24,7 @@ class EventoController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'nombre_evento' => 'required|string|max:255',
+            'nombre_evento' => 'required|string|max:255|unique:eventos,nombre_evento',
             'descripcion_evento' => 'required|string',
             'fecha_evento' => 'required|date',
             'hora_evento' => 'required|date_format:H:i',
@@ -71,7 +71,7 @@ class EventoController extends Controller
     public function update(Request $request, $id)
     {
         $request->validate([
-            'nombre_evento' => 'required|string|max:255',
+            'nombre_evento' => 'required|string|max:255|unique:eventos,nombre_evento',
             'descripcion_evento' => 'required|string',
             'fecha_evento' => 'required|date',
             'hora_evento' => 'required|date_format:H:i',
